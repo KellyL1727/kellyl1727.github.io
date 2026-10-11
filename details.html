@@ -121,7 +121,7 @@ body {
   object-fit: contain;
 
   left: 8%;
-  top: 15%;
+  top: 17%;
 
   border-radius: 50%;
   cursor: pointer;
@@ -139,7 +139,7 @@ body {
   width: 25%;
   height: auto;
 
-  top: 7%;
+  top: 10%;
   right: 7%;
 
   transform-origin: 65% 25%;
@@ -176,7 +176,7 @@ body {
 
 .polaroid-string {
     display: block;
-    width: 110%;
+    width: 108%;
     max-width: none;
     height: auto;
     margin-left: -5%;
@@ -234,13 +234,10 @@ body {
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  scroll-behavior: auto;
+
+  scroll-behavior: auto !important;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-}
-
-.film-scroll::-webkit-scrollbar {
-  display: none;
 }
 
 .film-track {
@@ -248,8 +245,6 @@ body {
   flex-wrap: nowrap;
   width: max-content;
   gap: 0;
-  padding: 0;
-  margin: 0;
 }
 
 .film-item {
@@ -534,21 +529,6 @@ body {
     >
 </div>
 
-<section class="prewedding-section" id="prewedding">
-  <div class="prewedding-heading">
-    <p>THE ALBUM</p>
-    <h2>Our Pre-Wedding Photos</h2>
-    <span>A little glimpse of us, before forever.</span>
-  </div>
-
-  <div class="film-scroll">
-    <div class="film-track" id="filmTrack"></div>
-  </div>
-
-  <div class="film-controls"><button type="button" id="filmPrev" aria-label="Scroll film left">‹</button><button type="button" id="filmNext" aria-label="Scroll film right">›</button></div>
-  <p class="film-instruction">← SWIPE OR USE ARROWS TO EXPLORE →</p>
-</section>
-
 <!-- Enlarged gallery -->
 <dialog id="photoViewer" class="photo-viewer">
   <button class="viewer-close" aria-label="Close">×</button>
@@ -570,8 +550,8 @@ body {
     <div class="event-date">City Tour · A City Full of Stories</div>
     <p>A relaxed guided tour through the city — iconic sights, hidden corners, great food, and stories from the bride’s family history and roots in Saigon.</p>
     <p class="event-meta"><a href="https://maps.app.goo.gl/zMBWVCWYFKZk9QEb6" target="_blank"rel="noopener noreferrer">TheSinhTourist Office</a> · 08:15</p>
-    <span class="dress">Dress code · Beige &amp; casual</span><div class="event-palette" aria-label="Day one dress code colour palette">
-<h4 class="wedding-palette-title">Shades of Saigon</h4>
+    <span class="dress">Dress code · Casual</span><div class="event-palette" aria-label="Day one dress code colour palette">
+<h4 class="wedding-palette-title">Timeless Neutrals</h4>
 <p class="wedding-palette-subtitle">Soft, sun-warmed neutrals for our city tour.</p>
 <div class="wedding-colours">
 <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#F0E2C9" title="#F0E2C9"></span><span class="wedding-colour-name"></span></div>
@@ -583,7 +563,7 @@ body {
   <p class="event-meta"><a href="https://maps.app.goo.gl/SRTKgZk4etiKKjBQ7" target="_blank"rel="noopener noreferrer">The Adora Center</a> · 18:00</p>
   <span class="dress">Dress code · Smart casual</span>
 <div class="wedding-palette" aria-label="Wedding day dress code colour palette">
-  <h4 class="wedding-palette-title">A Palette of Saigon</h4>
+  <h4 class="wedding-palette-title">A Touch of Colour</h4>
   <p class="wedding-palette-subtitle">We’d love for you to celebrate with us in one of these colours.</p>
   <div class="wedding-colours">
     <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#D6B98C" title="#D6B98C"></span><span class="wedding-colour-name" lang="vi"></span><span class="wedding-colour-english"></span></div>
@@ -601,7 +581,7 @@ body {
     <p class="event-meta"><a href="https://maps.app.goo.gl/tsCcrsEsxQpN7YC16" target="_blank"rel="noopener noreferrer">Saigon Port</a> · 17:30</p>
     <span class="dress">Dress code · Black tie</span>
     <div class="event-palette" aria-label="Cruise night black and white dress code palette">
-<h4 class="wedding-palette-title">An Evening in Monochrome</h4>
+<h4 class="wedding-palette-title">A Night in Old Hollywood</h4>
 <p class="wedding-palette-subtitle">A little old-world glamour for our final evening together.</p>
 <div class="wedding-colours">
 <div class="wedding-colour">
@@ -612,6 +592,19 @@ body {
 </div></div></section>
 <div class="vintage-bottom">
 <section class="section good-to-know" id="travel"><div class="section-inner"><div class="section-kicker">Before you travel</div><h2>Good to know</h2><p class="intro">A few useful things to make your journey a little easier.</p><div class="info-card"><h3>Make a trip of it</h3><p>Our celebrations take place in Ho Chi Minh City (Saigon), Vietnam, from 13th – 15th November 2026. Check the entry requirements for your passport well in advance!</p><div class="info-links"><a class="info-link" href="https://evisa.gov.vn/" rel="noopener noreferrer" target="_blank">Vietnam e‑Visa ↗</a><a class="info-link" href="https://prearrival.immigration.gov.vn/" rel="noopener noreferrer" target="_blank">Pre‑arrival form ↗</a></div></div></div></section>
+<section class="prewedding-section" id="prewedding">
+  <div class="prewedding-heading">
+    <h2>A Love Story on Film</h2>
+    <span>A little glimpse of us, before forever.</span>
+  </div>
+
+  <div class="film-scroll">
+    <div class="film-track" id="filmTrack"></div>
+  </div>
+
+  <div class="film-controls"><button type="button" id="filmPrev" aria-label="Scroll film left">‹</button><button type="button" id="filmNext" aria-label="Scroll film right">›</button></div>
+  <p class="film-instruction">← SWIPE OR USE ARROWS TO EXPLORE →</p>
+</section>
 <footer class="footer"><div class="monogram">G &amp; J</div><p>With love, in Saigon</p><a class="back-top" href="index.html">Back to the envelope ↑</a></footer>
 </div>
 </main>
@@ -711,40 +704,91 @@ document.getElementById("filmNext").addEventListener("click", () => {
 });
 
 // Gently advance the film continuously; pause for guest interaction.
+// Safari-friendly automatic film scrolling
+
 const filmSpeed = 20; // pixels per second
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
 let autoScrollId = null;
 let lastFrameTime = null;
 let filmIsInteracting = false;
 
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+);
+
 function autoScrollFilm(timestamp) {
   if (lastFrameTime !== null && loopWidth > 0) {
     const delta = Math.min(timestamp - lastFrameTime, 50);
-    filmScroll.scrollLeft += filmSpeed * delta / 1000;
+
+    const nextPosition =
+      filmScroll.scrollLeft + filmSpeed * delta / 1000;
+
+    filmScroll.scrollLeft = nextPosition;
   }
+
   lastFrameTime = timestamp;
   autoScrollId = requestAnimationFrame(autoScrollFilm);
 }
+
 function startAutoScroll() {
-  if (autoScrollId !== null || reduceMotion.matches || filmIsInteracting || viewer.open || document.hidden) return;
+  if (
+    autoScrollId !== null ||
+    reduceMotion.matches ||
+    filmIsInteracting ||
+    viewer.open ||
+    document.hidden
+  ) {
+    return;
+  }
+
   lastFrameTime = null;
   autoScrollId = requestAnimationFrame(autoScrollFilm);
 }
+
 function stopAutoScroll() {
-  if (autoScrollId !== null) cancelAnimationFrame(autoScrollId);
+  if (autoScrollId !== null) {
+    cancelAnimationFrame(autoScrollId);
+  }
+
   autoScrollId = null;
   lastFrameTime = null;
 }
-filmScroll.addEventListener("mouseenter", () => { filmIsInteracting = true; stopAutoScroll(); });
-filmScroll.addEventListener("mouseleave", () => { filmIsInteracting = false; startAutoScroll(); });
-filmScroll.addEventListener("touchstart", () => { filmIsInteracting = true; stopAutoScroll(); }, { passive: true });
-filmScroll.addEventListener("touchend", () => { filmIsInteracting = false; startAutoScroll(); }, { passive: true });
-filmScroll.addEventListener("touchcancel", () => { filmIsInteracting = false; startAutoScroll(); }, { passive: true });
-filmScroll.addEventListener("focusin", stopAutoScroll);
-filmScroll.addEventListener("focusout", startAutoScroll);
+
+window.addEventListener("load", () => {
+  resetFilmPosition();
+  startAutoScroll();
+});
+
+filmScroll.addEventListener("mouseenter", () => {
+  filmIsInteracting = true;
+  stopAutoScroll();
+});
+
+filmScroll.addEventListener("mouseleave", () => {
+  filmIsInteracting = false;
+  startAutoScroll();
+});
+
+filmScroll.addEventListener("touchstart", () => {
+  filmIsInteracting = true;
+  stopAutoScroll();
+}, { passive: true });
+
+filmScroll.addEventListener("touchend", () => {
+  filmIsInteracting = false;
+  startAutoScroll();
+}, { passive: true });
+
 viewer.addEventListener("close", startAutoScroll);
-document.addEventListener("visibilitychange", () => document.hidden ? stopAutoScroll() : startAutoScroll());
-reduceMotion.addEventListener("change", () => reduceMotion.matches ? stopAutoScroll() : startAutoScroll());
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    stopAutoScroll();
+  } else {
+    startAutoScroll();
+  }
+});
+
 startAutoScroll();
 
 // Open enlarged photo
