@@ -1,11 +1,65 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#e9dfd1"><title>Gillian & Jeffrey — You're Invited</title><style>
-* { box-sizing: border-box; }
-html, body { margin: 0; width: 100%; min-height: 100%; background: #e9dfd1; }
-body { overflow-x: hidden; overflow-y: auto; }
-.invitation { position: relative; display: block; width: 100%; max-width: 100%; margin: 0 auto; }
-.invitation img { display: block; width: 100%; height: auto; }
-.envelope-link { position: absolute; left: 10%; top: 36%; width: 87%; height: 41%; cursor: pointer; border-radius: 12px; outline-offset: -5px; }
-.envelope-link:focus-visible { outline: 3px solid #7d3945; }
-.envelope-link:hover { background: #ffffff0a; }
-@media (prefers-reduced-motion: no-preference) { .envelope-link:active { background: #ffffff16; } }
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #e9dfd1;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Invitation container */
+.invitation {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+}
+
+/* Full-width invitation image */
+.invitation img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Clickable envelope */
+.envelope-link {
+  position: absolute;
+  left: 10%;
+  top: 36%;
+  width: 87%;
+  height: 41%;
+  cursor: pointer;
+  border-radius: 12px;
+  outline-offset: -5px;
+}
+
+.envelope-link:focus-visible {
+  outline: 3px solid #7d3945;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .invitation {
+    width: 200%;
+    max-width: none;
+    margin-left: -50%;
+  }
+
+  .invitation img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
 </style></head><body><main class="invitation"><img src="images/Invitation.png" alt="Gillian and Jeffrey, 13th to 15th November 2026, Saigon Vietnam. Vintage ivory envelope with burgundy G and J wax seal. Tap the envelope to open."/><a class="envelope-link" href="details.html" aria-label="Open Gillian and Jeffrey's wedding invitation and see the wedding details"></a></main></body></html>
