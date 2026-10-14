@@ -50,6 +50,13 @@ main{display:block!important;animation:none!important}.section:first-child{paddi
   color: white;
 }
 
+@media (max-width: 600px) {
+  .hero {
+    background-size: auto 120%;
+    background-position: center bottom;
+  }
+}
+
 .hero-inner {
   max-width: 850px;
 }
@@ -189,6 +196,65 @@ body {
     background-repeat: no-repeat;
 }
 
+.calendar-container {
+  position: relative;
+  width: min(85vw, 400px);
+  margin: 50px auto;
+}
+
+.calendar-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.calendar-countdown {
+  position: absolute;
+
+  /* Adjust these to match your calendar image */
+  top: 62%;
+  left: 52%;
+
+  transform: translate(-50%, -50%);
+  width: 70%;
+  text-align: center;
+  color: #963e38;
+}
+
+.countdown-days span {
+  display: block;
+  font: 600 clamp(50px, 12vw, 85px)
+    "Cormorant Garamond", serif;
+  line-height: 1;
+}
+
+.countdown-days small {
+  font: 600 10px "DM Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+.countdown-time {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.countdown-time > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-time span {
+  font: 600 clamp(20px, 5vw, 30px)
+    "Cormorant Garamond", serif;
+}
+
+.countdown-time small {
+  font: 600 8px "DM Sans", sans-serif;
+  letter-spacing: 1px;
+}
 /* PRE-WEDDING GALLERY */
 
 .prewedding-section {
@@ -513,14 +579,14 @@ body {
 </div>
 
 <p class="record-hint">
-  ♪ Tap the record to play ♪
+  ♪ Tap the record to set the mood ♪
 </p>
 
 <audio id="wedding-song" loop>
   <source src="music/song.mp3" type="audio/mpeg">
 </audio>
 
-<p class="timeline-lead">It all began with a university project and one long conversation. Since then, life has taken us on adventures near and far — and we can't wait for the next chapter.</p></div>
+<p class="timeline-lead">It began with early morning classes and late night conversations. Since then, we've graduated side by side, crossed oceans, called a new country home, built a home of our own, and promised each other forever. Along the way, we've wandered through over 40 cities across 20 countries, collecting memories that have shaped the life we've built together.</p></div>
 <div class="polaroid-scroll">
     <img
         src="images/polaroid.png"
@@ -540,13 +606,51 @@ body {
   <p id="viewerCounter"></p>
 </dialog>
 
-<div class="timeline-ending"><p>From where it all started to everywhere we've been, these are some of our favourite memories together.</p><p>Now, we get to make the next one with you in Saigon.</p></div></section>
+<div class="timeline-ending"><p>Of all the places we've been, Saigon holds a special place in both our hearts. It feels only fitting to gather our favourite people in a city we hold dear, to celebrate how far we've come and all that lies ahead. We can't wait to share this next chapter with you.</p></div>
+
+<div class="calendar-container">
+
+  <!-- Realistic Vietnamese calendar image -->
+  <img
+    src="images/calendar.png"
+    class="calendar-image"
+    alt="Vietnamese wedding countdown calendar"
+  >
+
+  <!-- Countdown overlaid on the calendar -->
+  <div class="calendar-countdown">
+
+    <div class="countdown-days">
+      <span id="days">00</span>
+      <small>DAYS TO GO</small>
+    </div>
+
+    <div class="countdown-time">
+      <div>
+        <span id="hours">00</span>
+        <small>HOURS</small>
+      </div>
+      <div>
+        <span id="minutes">00</span>
+        <small>MINUTES</small>
+      </div>
+      <div>
+        <span id="seconds">00</span>
+        <small>SECONDS</small>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</section>
+
 <section class="section weekend" id="weekend"><div class="section-inner"><div class="section-kicker">The wedding weekend</div><h2>Three days in Saigon</h2><p class="intro">A few days of exploring, celebrating, and making memories.</p><div class="event-list">
 <article class="event">
   <div class="event-day">13<small>Friday</small>
   </div>
   <div>
-    <h3>Welcome to Saigon</h3>
+    <h3>The Welcome</h3>
     <div class="event-date">City Tour · A City Full of Stories</div>
     <p>A relaxed guided tour through the city — iconic sights, hidden corners, great food, and stories from the bride’s family history and roots in Saigon.</p>
     <p class="event-meta"><a href="https://maps.app.goo.gl/zMBWVCWYFKZk9QEb6" target="_blank"rel="noopener noreferrer">TheSinhTourist Office</a> · 08:15</p>
@@ -558,10 +662,10 @@ body {
 <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#D8C09B" title="#D8C09B"></span><span class="wedding-colour-name"></span></div>
 <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#BFA17C" title="#BFA17C"></span><span class="wedding-colour-name"></span></div>
 </div></div></div></article>
-<article class="event"><div class="event-day">14<small>Saturday</small></div><div><h3>A Love Letter to Saigon</h3><div class="event-date">Wedding Day · A Celebration of Us</div>
+<article class="event"><div class="event-day">14<small>Saturday</small></div><div><h3>The Wedding</h3><div class="event-date">Wedding Day · A Celebration of Us</div>
   <p>The big day. Join us for the ceremony, dinner, drinks, and a karaoke after party.</p>
   <p class="event-meta"><a href="https://maps.app.goo.gl/SRTKgZk4etiKKjBQ7" target="_blank"rel="noopener noreferrer">The Adora Center</a> · 18:00</p>
-  <p class="event-meta"><a href="https://maps.app.goo.gl/TXyh3MnUkhZMzobJA" target="_blank"rel="noopener noreferrer">The After Party</a> · 23:00</p>
+  <p class="event-meta"><a href="https://maps.app.goo.gl/TXyh3MnUkhZMzobJA" target="_blank"rel="noopener noreferrer">The Happily Ever After Party</a> · 23:00</p>
   <span class="dress">Dress code · Smart casual</span>
 <div class="wedding-palette" aria-label="Wedding day dress code colour palette">
   <h4 class="wedding-palette-title">A Touch of Colour</h4>
@@ -576,7 +680,7 @@ body {
 </div></div></article>
 <article class="event"><div class="event-day">15<small>Sunday</small></div>
   <div>
-    <h3>Farewell, Saigon</h3>
+    <h3>The Farewell</h3>
     <div class="event-date">Evening Cruise · Saigon After Dark</div>
     <p>A dinner cruise along the Saigon River to say goodbye and thank you for flying over to celebrate with us.</p>
     <p class="event-meta"><a href="https://maps.app.goo.gl/tsCcrsEsxQpN7YC16" target="_blank"rel="noopener noreferrer">Saigon Port</a> · 17:30</p>
@@ -606,7 +710,7 @@ body {
   <div class="film-controls"><button type="button" id="filmPrev" aria-label="Scroll film left">‹</button><button type="button" id="filmNext" aria-label="Scroll film right">›</button></div>
   <p class="film-instruction">← SWIPE OR USE ARROWS TO EXPLORE →</p>
 </section>
-<footer class="footer"><div class="monogram">G &amp; J</div><p>With love, in Saigon</p><a class="back-top" href="index.html">Back to the envelope ↑</a></footer>
+<footer class="footer"><div class="monogram">G &amp; J</div><p>With love from Saigon</p><a class="back-top" href="index.html">Back to the envelope ↑</a></footer>
 </div>
 </main>
 <script>
@@ -636,6 +740,30 @@ function syncPlayer() {
 song.addEventListener("play", syncPlayer);
 song.addEventListener("pause", syncPlayer);
 song.addEventListener("ended", syncPlayer);
+
+const weddingDate = new Date(
+  "2026-11-14T18:00:00+07:00"
+).getTime();
+
+function updateCountdown() {
+  const remaining = Math.max(0, weddingDate - Date.now());
+
+  const days = Math.floor(remaining / 86400000);
+  const hours = Math.floor((remaining / 3600000) % 24);
+  const minutes = Math.floor((remaining / 60000) % 60);
+  const seconds = Math.floor((remaining / 1000) % 60);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent =
+    String(hours).padStart(2, "0");
+  document.getElementById("minutes").textContent =
+    String(minutes).padStart(2, "0");
+  document.getElementById("seconds").textContent =
+    String(seconds).padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
 
 const preweddingPhotos = [
   "images/1.jpg",
