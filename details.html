@@ -6,7 +6,14 @@
 .opening:before,.opening:after{content:'';position:absolute;inset:14px;border:1px solid rgba(176,139,83,.5);pointer-events:none;z-index:-1}.opening:after{inset:20px;border-color:rgba(176,139,83,.2)}.corner{position:absolute;color:var(--gold);font:20px var(--serif);opacity:.75}.tl{top:25px;left:28px}.tr{top:25px;right:28px}.bl{bottom:25px;left:28px}.br{bottom:25px;right:28px}
 .eyebrow{text-transform:uppercase;letter-spacing:.23em;font-size:9px;font-weight:700;color:var(--wine)}.opening h1{font:500 clamp(46px,13vw,70px)/.86 var(--serif);letter-spacing:-.045em;margin:18px 0 12px}.place{font:italic 20px var(--serif);color:var(--muted);margin:0}.date-line{margin:18px 0 28px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .envelope-wrap{width:min(82vw,330px);margin:0 auto 20px;perspective:900px}.envelope-button{display:block;width:100%;position:relative;border:0;background:transparent;padding:0;cursor:pointer;touch-action:manipulation;outline-offset:10px}.envelope{display:block;position:relative;aspect-ratio:1.52/1;filter:drop-shadow(0 18px 20px rgba(71,45,29,.15));transition:transform .35s ease}.envelope-button:active .envelope{transform:translateY(3px) scale(.99)}.env-back{position:absolute;inset:0;background:#e2d0b5;border:1px solid #c5ad8a;border-radius:3px}.env-paper{position:absolute;left:9%;right:9%;bottom:9%;height:90%;background:var(--light);border:1px solid #e1d2ba;transition:transform .8s cubic-bezier(.2,.7,.2,1)}.env-front{position:absolute;inset:0;background:linear-gradient(145deg,#ead9bf,#d8c09b);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);border:1px solid #c6ad88}.env-flap{position:absolute;inset:0;background:linear-gradient(155deg,#f0dfc4,#d7bd95);clip-path:polygon(0 0,100% 0,50% 58%);transform-origin:top center;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .3s ease;z-index:4}.seal{position:absolute;z-index:5;left:50%;top:51%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#984a50,var(--wine) 62%,#4d1c25);color:#ead5ad;border:1px solid #c49b60;box-shadow:0 2px 5px #85694d55;font:23px var(--serif);transition:opacity .25s ease,transform .35s ease}.opened .env-flap{transform:rotateX(180deg);opacity:0}.opened .seal{opacity:0;transform:translate(-50%,-50%) scale(.7)}.opened .env-paper{transform:translateY(-43%)}.tap-hint{font-size:10px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin:0}.tap-hint span{display:inline-block;margin-left:7px;animation:nudge 1.5s infinite}@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}.opened-note{display:none;color:var(--wine);font-size:11px;margin-top:12px;letter-spacing:.06em}.has-opened .opened-note{display:block}
-main{display:none;animation:fade-in .8s ease both}main.visible{display:block}@keyframes fade-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}.section{padding:64px 24px}.section-inner{width:min(100%,680px);margin:0 auto}.section-kicker{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.22em;color:var(--wine);text-align:center}.section h2{font:500 clamp(38px,10vw,52px)/.95 var(--serif);text-align:center;margin:13px 0 18px;letter-spacing:-.025em}.intro{text-align:center;max-width:440px;margin:0 auto;color:var(--muted);font:italic 20px/1.35 var(--serif)}.ornament{display:flex;justify-content:center;align-items:center;gap:12px;color:var(--gold);margin:25px 0;font-size:13px}.ornament:before,.ornament:after{content:'';width:42px;height:1px;background:var(--gold);opacity:.65}
+main{display:none;animation:fade-in .8s ease both}main.visible{display:block}@keyframes fade-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}.section{padding:64px 24px}.section-inner{width:min(100%,680px);margin:0 auto}.section-kicker{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.22em;color:var(--wine);text-align:center}
+.section h2{
+  font:500 clamp(38px,10vw,52px)/.95 var(--serif);
+  text-align:center;
+  margin:13px 0 18px;
+  letter-spacing:-.025em
+}
+.intro{text-align:center;max-width:440px;margin:0 auto;color:var(--muted);font:italic 20px/1.35 var(--serif)}.ornament{display:flex;justify-content:center;align-items:center;gap:12px;color:var(--gold);margin:25px 0;font-size:13px}.ornament:before,.ornament:after{content:'';width:42px;height:1px;background:var(--gold);opacity:.65}
 .story{background:var(--light);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.story-copy{text-align:center;max-width:510px;margin:0 auto;font-size:13px;line-height:1.9;color:#5d5146}.story-copy p{margin:0 0 12px}
 .weekend {
   background:
@@ -194,6 +201,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.title h2{
+  font:500 clamp(38px,10vw,52px)/.95 var(--serif);
+  text-align:center;
+  margin:13px 0 18px;
+  letter-spacing:-.025em
 }
 
 .calendar-container {
@@ -541,6 +555,43 @@ body {
   .weekend .wedding-palette, .weekend .event-palette { padding: 16px 11px; }
 }
 
+
+/* Vintage editorial headings — consistent with the paper and Polaroids */
+.timeline-head .story-title {
+  font-family: var(--serif);
+  font-size: clamp(42px, 9vw, 62px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  color: #594435;
+  text-align: center;
+  margin: 22px auto 24px;
+}
+.timeline-head .story-title::after {
+  content: "✦";
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #a88a62;
+  margin-top: 15px;
+}
+.countdown-title {
+  font-family: var(--serif);
+  font-size: clamp(42px, 9vw, 62px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+  color: #873f35;
+  text-align: center;
+  margin: 0 0 9px;
+  text-wrap: balance;
+  padding-top: 30px;
+}
+@media (max-width: 420px) {
+  .timeline-head .story-title { font-size: 44px; }
+  .countdown-title { font-size: clamp(16px, 4.4vw, 19px); margin-bottom: 6px; }
+}
 </style></head>
 <body><main>
 
@@ -586,6 +637,7 @@ body {
   <source src="music/song.mp3" type="audio/mpeg">
 </audio>
 
+<h2 class="story-title">The Story of Us</h2>
 <p class="timeline-lead">It began with early morning classes and late night conversations. Since then, we've graduated side by side, crossed oceans, called a new country home, built a home of our own, and promised each other forever. Along the way, we've wandered through over 40 cities across 20 countries, collecting memories that have shaped the life we've built together.</p></div>
 <div class="polaroid-scroll">
     <img
@@ -608,6 +660,7 @@ body {
 
 <div class="timeline-ending"><p>Of all the places we've been, Saigon holds a special place in both our hearts. It feels only fitting to gather our favourite people in a city we hold dear, to celebrate how far we've come and all that lies ahead. We can't wait to share this next chapter with you.</p></div>
 
+<h2 class="countdown-title">The Days Until Forever</h2>
 <div class="calendar-container">
 
   <!-- Realistic Vietnamese calendar image -->
@@ -619,7 +672,6 @@ body {
 
   <!-- Countdown overlaid on the calendar -->
   <div class="calendar-countdown">
-
     <div class="countdown-days">
       <span id="days">00</span>
       <small>DAYS TO GO</small>
@@ -645,31 +697,31 @@ body {
 
 </section>
 
-<section class="section weekend" id="weekend"><div class="section-inner"><div class="section-kicker">The wedding weekend</div><h2>Three days in Saigon</h2><p class="intro">A few days of exploring, celebrating, and making memories.</p><div class="event-list">
+<section class="section weekend" id="weekend"><div class="section-inner"><div class="section-kicker">The wedding weekend</div><h2>A Celebration in Saigon</h2><p class="intro">Three days, one special place, countless memories.</p><div class="event-list">
 <article class="event">
   <div class="event-day">13<small>Friday</small>
   </div>
   <div>
     <h3>The Welcome</h3>
     <div class="event-date">City Tour · A City Full of Stories</div>
-    <p>A relaxed guided tour through the city — iconic sights, hidden corners, great food, and stories from the bride’s family history and roots in Saigon.</p>
+    <p>Discover Saigon's iconic sights, hidden corners,  local flavours, and the history and heritage that make this city so meaningful to us.</p>
     <p class="event-meta"><a href="https://maps.app.goo.gl/zMBWVCWYFKZk9QEb6" target="_blank"rel="noopener noreferrer">TheSinhTourist Office</a> · 08:15</p>
-    <span class="dress">Dress code · Casual</span><div class="event-palette" aria-label="Day one dress code colour palette">
+    <span class="dress">Dress code · Relaxed Casual</span><div class="event-palette" aria-label="Day one dress code colour palette">
 <h4 class="wedding-palette-title">Timeless Neutrals</h4>
-<p class="wedding-palette-subtitle">Soft, sun-warmed neutrals for our city tour.</p>
+<p class="wedding-palette-subtitle">Soft sun-warmed tones and effortless city style. </p>
 <div class="wedding-colours">
 <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#F0E2C9" title="#F0E2C9"></span><span class="wedding-colour-name"></span></div>
 <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#D8C09B" title="#D8C09B"></span><span class="wedding-colour-name"></span></div>
 <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#BFA17C" title="#BFA17C"></span><span class="wedding-colour-name"></span></div>
 </div></div></div></article>
 <article class="event"><div class="event-day">14<small>Saturday</small></div><div><h3>The Wedding</h3><div class="event-date">Wedding Day · A Celebration of Us</div>
-  <p>The big day. Join us for the ceremony, dinner, drinks, and a karaoke after party.</p>
+  <p>The big day. Join us for the ceremony, followed by dinner, drinks, and dancing. Keep the night alive into the early hours at the karaoke after party.</p>
   <p class="event-meta"><a href="https://maps.app.goo.gl/SRTKgZk4etiKKjBQ7" target="_blank"rel="noopener noreferrer">The Adora Center</a> · 18:00</p>
-  <p class="event-meta"><a href="https://maps.app.goo.gl/TXyh3MnUkhZMzobJA" target="_blank"rel="noopener noreferrer">The Happily Ever After Party</a> · 23:00</p>
+  <p class="event-meta"><a href="https://maps.app.goo.gl/TXyh3MnUkhZMzobJA" target="_blank"rel="noopener noreferrer">The Happily Ever After Party</a> · 23:30</p>
   <span class="dress">Dress code · Smart casual</span>
 <div class="wedding-palette" aria-label="Wedding day dress code colour palette">
-  <h4 class="wedding-palette-title">A Touch of Colour</h4>
-  <p class="wedding-palette-subtitle">We’d love for you to celebrate with us in one of these colours.</p>
+  <h4 class="wedding-palette-title">Vintage Hues</h4>
+  <p class="wedding-palette-subtitle">Muted tones and colours from another era.</p>
   <div class="wedding-colours">
     <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#D6B98C" title="#D6B98C"></span><span class="wedding-colour-name" lang="vi"></span><span class="wedding-colour-english"></span></div>
     <div class="wedding-colour"><span class="wedding-swatch" style="--swatch:#E6A39A" title="#E6A39A"></span><span class="wedding-colour-name" lang="vi"></span><span class="wedding-colour-english"></span></div>
@@ -682,12 +734,12 @@ body {
   <div>
     <h3>The Farewell</h3>
     <div class="event-date">Evening Cruise · Saigon After Dark</div>
-    <p>A dinner cruise along the Saigon River to say goodbye and thank you for flying over to celebrate with us.</p>
+    <p>As the city lights up after dark, let’s gather for a dinner cruise on the Saigon River. One final toast to a weekend we'll always remember.</p>
     <p class="event-meta"><a href="https://maps.app.goo.gl/tsCcrsEsxQpN7YC16" target="_blank"rel="noopener noreferrer">Saigon Port</a> · 17:30</p>
     <span class="dress">Dress code · Black tie</span>
     <div class="event-palette" aria-label="Cruise night black and white dress code palette">
-<h4 class="wedding-palette-title">A Night in Old Hollywood</h4>
-<p class="wedding-palette-subtitle">A little old-world glamour for our final evening together.</p>
+<h4 class="wedding-palette-title">Classic Monochrome </h4>
+<p class="wedding-palette-subtitle">Evening elegance in black and white, against the city lights.</p>
 <div class="wedding-colours">
 <div class="wedding-colour">
   <span class="wedding-swatch black-swatch" style="--swatch:#111111" title="Black">
@@ -696,11 +748,11 @@ body {
 </div></div></div></article>
 </div></div></section>
 <div class="vintage-bottom">
-<section class="section good-to-know" id="travel"><div class="section-inner"><div class="section-kicker">Before you travel</div><h2>Good to know</h2><p class="intro">A few useful things to make your journey a little easier.</p><div class="info-card"><h3>Make a trip of it</h3><p>Our celebrations take place in Ho Chi Minh City (Saigon), Vietnam, from 13th – 15th November 2026. Check the entry requirements for your passport well in advance!</p><div class="info-links"><a class="info-link" href="https://evisa.gov.vn/" rel="noopener noreferrer" target="_blank">Vietnam e‑Visa ↗</a><a class="info-link" href="https://prearrival.immigration.gov.vn/" rel="noopener noreferrer" target="_blank">Pre‑arrival form ↗</a></div></div></div></section>
+<section class="section good-to-know" id="travel"><div class="section-inner"><div class="section-kicker">Before you travel</div><h2>Good to know</h2><p class="intro">A few useful things to make your journey a little easier.</p><div class="info-card"><h3>Make a trip of it</h3><p>Check the entry requirements for your passport well in advance!</p><div class="info-links"><a class="info-link" href="https://evisa.gov.vn/" rel="noopener noreferrer" target="_blank">Vietnam e‑Visa ↗</a><a class="info-link" href="https://prearrival.immigration.gov.vn/" rel="noopener noreferrer" target="_blank">Pre‑arrival form ↗</a></div></div></div></section>
 <section class="prewedding-section" id="prewedding">
   <div class="prewedding-heading">
-    <h2>A Love Story on Film</h2>
-    <span>A little glimpse of us, before forever.</span>
+    <h2>Saigon on Film</h2>
+    <span>Moments from the city, memories of our own.</span>
   </div>
 
   <div class="film-scroll">
