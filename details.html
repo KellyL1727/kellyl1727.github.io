@@ -37,9 +37,22 @@ main{display:none;animation:fade-in .8s ease both}main.visible{display:block}@ke
 .weekend .event p {
   color: #756655;
 }
-.event-list{margin-top:34px;border-top:1px solid rgba(244,237,223,.35)}.event{padding:25px 0 27px;border-bottom:1px solid rgba(244,237,223,.35);display:grid;grid-template-columns:66px 1fr;gap:17px}.event-day{color:#e5c891;font:italic 28px/.95 var(--serif)}.event-day small{display:block;font:700 8px var(--sans);text-transform:uppercase;letter-spacing:.16em;margin-top:8px}.event h3{margin:0 0 6px;font:500 30px/.95 var(--serif)}.event-date{color:#e5c891;font-size:9px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:12px}.event p{margin:0 0 11px;color:#f0e5d8;font-size:12px;line-height:1.7}.event-meta{color:#d9c1b0!important;font-size:10px!important;letter-spacing:.04em}.dress{display:inline-block;border:1px solid rgba(229,200,145,.6);color:#f0d7a5;padding:6px 9px;font-size:9px;letter-spacing:.08em;margin-top:3px}
+.event-list{margin-top:34px;border-top:1px solid rgba(244,237,223,.35)}.event{padding:25px 0 27px;border-bottom:1px solid rgba(244,237,223,.35);display:grid;grid-template-columns:66px 1fr;gap:17px}
+.event-day{color:#e5c891;
+  font:italic 28px/.95 var(--serif)}
+.event-day small{display:block;
+  font:700 8px var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  margin-top:8px}
+.event h3{margin:0 0 6px;font:500 30px/.95 var(--serif)}.event-date{color:#e5c891;font-size:9px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:12px}.event p{margin:0 0 11px;color:#f0e5d8;font-size:12px;line-height:1.7}.event-meta{color:#d9c1b0!important;font-size:10px!important;letter-spacing:.04em}.dress{display:inline-block;border:1px solid rgba(229,200,145,.6);color:#f0d7a5;padding:6px 9px;font-size:9px;letter-spacing:.08em;margin-top:3px}
 .good-to-know{background:transparent}.info-card{border:1px solid var(--line);padding:24px 20px;margin-top:22px;text-align:center}.info-card h3{font:500 27px var(--serif);margin:0 0 9px}.info-card p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}.info-links{display:grid;grid-template-columns:1fr;gap:10px;margin-top:18px}.info-link{text-decoration:none;border:1px solid var(--gold);padding:13px 12px;color:var(--wine);text-transform:uppercase;font-size:9px;font-weight:700;letter-spacing:.13em}.info-link:active{background:#eadfcd}.footer{text-align:center;padding:42px 20px 54px;;}.monogram{font:italic 38px var(--serif);color:var(--wine)}.footer p{font:italic 17px var(--serif);color:var(--muted);margin:8px 0 0}.back-top{display:inline-block;margin-top:20px;color:var(--wine);text-decoration:none;font-size:9px;text-transform:uppercase;letter-spacing:.17em;border-bottom:1px solid var(--gold);padding-bottom:5px}
-@media(min-width:700px){.opening{min-height:720px}.section{padding:84px 32px}.event{grid-template-columns:90px 1fr;gap:24px;padding:30px 0}.event h3{font-size:36px}.info-links{grid-template-columns:1fr 1fr}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media(min-width:700px){
+  .opening{min-height:720px}
+  .section{padding:84px 32px}
+  .event{grid-template-columns:90px 1fr;gap:24px;padding:30px 0}
+  .event h3{font-size:36px}
+  .info-links{grid-template-columns:1fr 1fr}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
 main{display:block!important;animation:none!important}.section:first-child{padding-top:85px}.back-top{display:inline-block}
 
@@ -590,7 +603,20 @@ body {
 }
 @media (max-width: 420px) {
   .timeline-head .story-title { font-size: 44px; }
-  .countdown-title { font-size: clamp(16px, 4.4vw, 19px); margin-bottom: 6px; }
+  .countdown-title { font-size: 44px; }
+}
+
+@media (max-width: 600px) {
+  .weekend .event {
+    grid-template-columns: 65px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .weekend .event-day small {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
 }
 </style></head>
 <body><main>
@@ -705,7 +731,7 @@ body {
     <h3>The Welcome</h3>
     <div class="event-date">City Tour · A City Full of Stories</div>
     <p>Discover Saigon's iconic sights, hidden corners,  local flavours, and the history and heritage that make this city so meaningful to us.</p>
-    <p class="event-meta"><a href="https://maps.app.goo.gl/zMBWVCWYFKZk9QEb6" target="_blank"rel="noopener noreferrer">TheSinhTourist Office</a> · 08:15</p>
+    <p class="event-meta"><a href="https://maps.app.goo.gl/zMBWVCWYFKZk9QEb6" target="_blank"rel="noopener noreferrer">TheSinhTourist Office</a> · 08:00</p>
     <span class="dress">Dress code · Relaxed Casual</span><div class="event-palette" aria-label="Day one dress code colour palette">
 <h4 class="wedding-palette-title">Timeless Neutrals</h4>
 <p class="wedding-palette-subtitle">Soft sun-warmed tones and effortless city style. </p>
@@ -733,10 +759,10 @@ body {
 <article class="event"><div class="event-day">15<small>Sunday</small></div>
   <div>
     <h3>The Farewell</h3>
-    <div class="event-date">Evening Cruise · Saigon After Dark</div>
+    <div class="event-date">Evening Cruise · Saigon by Night</div>
     <p>As the city lights up after dark, let’s gather for a dinner cruise on the Saigon River. One final toast to a weekend we'll always remember.</p>
     <p class="event-meta"><a href="https://maps.app.goo.gl/tsCcrsEsxQpN7YC16" target="_blank"rel="noopener noreferrer">Saigon Port</a> · 17:30</p>
-    <span class="dress">Dress code · Black tie</span>
+    <span class="dress">Dress code · Smart Casual</span>
     <div class="event-palette" aria-label="Cruise night black and white dress code palette">
 <h4 class="wedding-palette-title">Classic Monochrome </h4>
 <p class="wedding-palette-subtitle">Evening elegance in black and white, against the city lights.</p>
